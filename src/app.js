@@ -26,11 +26,13 @@ window.onload = () => {
     topSuitJs.innerText = randomCardSuit.symbol;
     let bottomSuitJs = document.getElementById("bottomSuit");
     bottomSuitJs.innerText = randomCardSuit.symbol;
-  }
-
-  if (randomCardSuit.name === "hearts" || randomCardSuit.name === "diamonds") {
-    topSuitJs.style.color = "red";
-    bottomSuitJs.style.color = "red";
+    if (
+      randomCardSuit.name === "hearts" ||
+      randomCardSuit.name === "diamonds"
+    ) {
+      topSuitJs.style.color = "red";
+      bottomSuitJs.style.color = "red";
+    }
   }
   randomCard();
 };
