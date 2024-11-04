@@ -45,13 +45,3 @@ body {
 .value {
   font-size: 70px;
 }
-
-.hearts,
-.diamonds {
-  color: red;
-}
-
-.spades,
-.clubs {
-  color: black;
-}

@@ -18,22 +18,19 @@ window.onload = () => {
   };
 
   function randomCard() {
-    let randomCardValue = values[ramdomFuntion(cardValue.length)];
-    let randomCardSuit = suits[ramdomFuntion(cardSuit.length)];
+    let randomCardValue = cardValue[ramdomFuntion(cardValue.length)];
+    let randomCardSuit = cardSuit[ramdomFuntion(cardSuit.length)];
+    let cardValueJs = document.getElementById("cardValue");
+    cardValueJs.innerText = randomCardValue;
+    let topSuitJs = document.getElementById("topSuit");
+    topSuitJs.innerText = randomCardSuit.symbol;
+    let bottomSuitJs = document.getElementById("bottomSuit");
+    bottomSuitJs.innerText = randomCardSuit.symbol;
+  }
 
-    document.getElementById("cardValue").innerText = randomCardValue;
-    document.getElementById("topSuit").innerText = randomCardSuit.symbol;
-    document.getElementById("bottomSuit").innerText = randomCardSuit.symbol;
-
-    document.getElementById(
-      "topSuit"
-    ).className = `suit suit-top ${randomCardSuit.name}`;
-    document.getElementById(
-      "bottomSuit"
-    ).className = `suit suit-bottom ${randomCardSuit.name}`;
-    document.getElementById(
-      "cardValue"
-    ).className = `value ${randomCardSuit.name}`;
+  if (randomCardSuit.name === "hearts" || randomCardSuit.name === "diamonds") {
+    topSuitJs.style.color = "red";
+    bottomSuitJs.style.color = "red";
   }
   randomCard();
 };
