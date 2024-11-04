@@ -6,11 +6,10 @@ body {
   height: 100vh;
   margin: 0;
   background-color: green;
+  line-height: normal;
 }
 
 .card {
-  width: 150px;
-  height: 200px;
   border: 1px solid black;
   border-radius: 10px;
   background-color: white;
@@ -25,7 +24,7 @@ body {
 
 .suit-top,
 .suit-bottom {
-  font-size: 35px;
+  font-size: 110px;
   padding: 5px;
   position: relative;
   line-height: 1;
@@ -43,5 +42,5 @@ body {
 }
 
 .value {
-  font-size: 70px;
+  font-size: 200px;
 }
